@@ -2,7 +2,7 @@
 
 ## 1. Project Structure
 
-```
+```bash
 debty/
 ├── src/
 │   ├── pages/
