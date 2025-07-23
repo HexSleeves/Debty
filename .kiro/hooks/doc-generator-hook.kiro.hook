@@ -1,0 +1,19 @@
+{
+  "enabled": true,
+  "name": "Documentation Generator",
+  "description": "Automatically generates comprehensive documentation for modified files including function signatures, parameters, return types, usage examples, and updates README.md with new exports",
+  "version": "1",
+  "when": {
+    "type": "userTriggered",
+    "patterns": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "convex/**/*.ts",
+      "lib/**/*.ts"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Generate comprehensive documentation for the current file: 1. Extract function and class signatures 2. Document parameters and return types 3. Provide usage examples based on existing code 4. Update the README.md with any new exports 5. Ensure documentation follows project standards"
+  }
+}

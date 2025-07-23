@@ -1,0 +1,16 @@
+{
+	"mcpServers": {
+		"browsermcp": {
+			"command": "npx",
+			"args": ["-y", "@browsermcp/mcp"]
+		},
+		"playwright": {
+			"command": "npx",
+			"args": ["@playwright/mcp@latest"]
+		},
+		"convex": {
+			"command": "npx",
+			"args": ["-y", "convex@latest", "mcp", "start"]
+		}
+	}
+}

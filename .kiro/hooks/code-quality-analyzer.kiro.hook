@@ -1,0 +1,20 @@
+{
+	"enabled": true,
+	"name": "Code Quality Analyzer",
+	"description": "Monitors source code files for changes and provides automated code quality analysis, suggesting improvements for readability, maintainability, and performance while maintaining existing functionality",
+	"version": "1",
+	"when": {
+		"type": "fileEdited",
+		"patterns": [
+			"src/**/*.tsx",
+			"src/**/*.ts",
+			"convex/**/*.ts",
+			"src/**/*.js",
+			"convex/**/*.js"
+		]
+	},
+	"then": {
+		"type": "askAgent",
+		"prompt": "Analyze the modified code files for potential improvements. Focus on:\n\n1. **Code Smells & Anti-patterns**: Identify long functions, duplicate code, complex conditionals, and other maintainability issues\n2. **Design Patterns**: Suggest appropriate React patterns, TypeScript best practices, and architectural improvements\n3. **Performance Optimizations**: Look for unnecessary re-renders, inefficient algorithms, memory leaks, and bundle size concerns\n4. **Readability**: Recommend better naming, code organization, and documentation\n5. **Best Practices**: Ensure adherence to React 19, TypeScript, Convex, and project-specific conventions\n6. **Security**: Check for potential vulnerabilities or unsafe practices\n\nFor each suggestion:\n- Explain WHY the change improves the code\n- Provide specific code examples when helpful\n- Prioritize suggestions by impact (High/Medium/Low)\n- Ensure suggestions maintain existing functionality\n- Consider the project's tech stack: React 19, TypeScript, Convex, shadcn/ui, Tailwind\n\nFormat your response as actionable recommendations that developers can implement immediately."
+	}
+}
